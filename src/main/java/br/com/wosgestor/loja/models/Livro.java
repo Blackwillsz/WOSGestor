@@ -2,9 +2,18 @@ package br.com.wosgestor.loja.models;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+
+@Entity
 public class Livro {
 	
+	@Id
+	private Integer id;
 	private String titulo;
+	
+	@Lob
 	private String descricao;
 	private BigDecimal preco;
 	private Integer numeroPaginas;

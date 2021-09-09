@@ -8,20 +8,20 @@
 	<h:form>
 	<div>
 		<h:outputLabel value="Título" />
-		<h:inputText value="{adminLivrosBean.livro.titulo}"  />
+		<h:inputText value="#{adminLivrosBean.livro.titulo}"  />
 	</div>
 		<div>
 		<h:outputLabel value="Descrição" />
-		<h:inputTextarea rows="4" cols="20" value="{adminLivrosBean.livro.descricao}"/>
+		<h:inputTextarea rows="4" cols="20" value="#{adminLivrosBean.livro.descricao}"/>
 	</div>
 		<div>
 		<h:outputLabel value="Número de Páginas" />
-		<h:inputText value="{adminLivrosBean.livro.numeroPaginas}" />
+		<h:inputText value="#{adminLivrosBean.livro.numeroPaginas}" />
 	</div>
 	<div>
 		<h:outputLabel value="Preço" />
-		<h:inputText value="{adminLivrosBean.livro.preco}"/>
+		<h:inputText value="#{adminLivrosBean.livro.preco}"/>
 	</div>
-	<h:commandButton value="Cadastrar" />
+	<h:commandButton value="Cadastrar" action="#{adminLivrosBean.salvar}" />
 </h:form>
 </html>
