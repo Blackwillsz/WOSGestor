@@ -10,6 +10,7 @@ public class LivroDao {
 	@PersistenceContext
 	private EntityManager manager;
 	
+	
 	public void salvar(Livro livro) {
 		manager.getTransaction().begin();
 		manager.persist(livro);
