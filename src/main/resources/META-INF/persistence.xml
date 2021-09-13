@@ -3,22 +3,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     version="2.1" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
     http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-    <persistence-unit name="wosgestor-dev" transaction-type="JTA">
+    <persistence-unit name="wosgetor-dev" transaction-type="JTA">
         <description>Dev persistence unit</description>
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <!-- java transaction api || JNDI -->
         <jta-data-source>java:jboss/datasources/wosgestorDS</jta-data-source>
         <properties>
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-           
-	            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/wosgestor_javaee?serverTimezone=UTC" />
-	            <property name="javax.persistence.jdbc.user" value="root" />
-	            <property name="javax.persistence.jdbc.password" value="itfprod" />
-	            <property name="hibernate.show_sql" value="true"/>  
-				<property name="hibernate.format_sql" value="true"/> 
-				
-	            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
         </properties>
     </persistence-unit>
 </persistence>
